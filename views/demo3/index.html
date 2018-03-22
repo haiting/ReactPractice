@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>React Practice</title>
+    <script src="../js/plugin/react/react.js"></script>
+    <script src="../js/plugin/react/react-dom.js"></script>
+    <script src="../js/plugin/react/browser.min.js"></script>
+  </head>
+  <body>
+    <h1>ReactPractice</h1>
+    <div id="demo3"></div>
+    <h2>React arr 变量</h2>
+    <div id="demo3-1"></div>
+    <script type="text/babel">
+      //三、JSX 语法
+      var namesArr = ['React', 'FrontEnd', 'Framework', 'Javascript'];
+      ReactDOM.render(
+        <ol>
+          {
+            namesArr.map(function (name) {
+              return <li>Hello,{name}!</li>
+            })
+          }
+        </ol>,
+        document.getElementById('demo3')
+      );
+
+      var htmlArr = [!
+        <li>Hello, React!</li>,
+        <li>React is awesome!</li>
+      ]
+      ReactDOM.render(
+        <ol>
+          {htmlArr}
+        </ol>,
+        document.getElementById('demo3-1')
+      )
+    </script>
+  </body>
+</html>
