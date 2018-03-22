@@ -3,6 +3,7 @@ Action for react practice
 That's beginner's practice
 
 一、HTML 模板
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,3 +18,4 @@ That's beginner's practice
     </script>
   </body>
 </html>
+```
