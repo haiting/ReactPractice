@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Practice</title>
+  <script src="../js/plugin/react/react.js"></script>
+  <script src="../js/plugin/react/react-dom.js"></script>
+  <script src="../js/plugin/react/browser.min.js"></script>
+</head>
+<body>
+  <div id="demo9">
+    
+  </div>
+  <script type="text/babel">
+    var InputBox = React.createClass({
+      getInitialState: function () {
+        return {value: 'input Form'};
+      },
+      handleChange: function (event) {
+        this.setState({value: event.target.value});
+      },
+      render: function () {
+        var value = this.state.value;
+        return (
+          <form>
+            <input type="text" value={value} onChange={this.handleChange} />
+            <p>{value}</p>
+          </form>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <InputBox />,
+      document.getElementById('demo9')
+    );
+  </script>
+</body>
+</html>

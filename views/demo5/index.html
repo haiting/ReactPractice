@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Practice</title>
+  <script src="../js/plugin/react/react.js"></script>
+  <script src="../js/plugin/react/react-dom.js"></script>
+  <script src="../js/plugin/react/browser.min.js"></script>
+</head>
+<body>
+  <h1>render component's children</h1>
+  <div id="demo5">
+    
+  </div>
+  <script type="text/babel">
+    //五、this.props.children
+    var NodeList = React.createClass({
+      render: function () {
+        return (
+          <ol>
+            {
+              React.Children.map(this.props.children, function (name) {
+                return <li>{name}</li>;
+              })
+            }
+          </ol>
+        )
+      }
+    })
+
+    ReactDOM.render(
+      <NodeList>
+        <span>this.props.children</span>
+        <span>this.props.children</span>
+        <span>this.props.children</span>
+      </NodeList>,
+      document.getElementById('demo5')
+    );
+
+  </script>
+</body>
+</html>
