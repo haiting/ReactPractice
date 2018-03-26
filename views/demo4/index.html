@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Practice</title>
+  <script src="../js/plugin/react/react.js"></script>
+  <script src="../js/plugin/react/react-dom.js"></script>
+  <script src="../js/plugin/react/browser.min.js"></script>
+</head>
+<body>
+  <div id="demo4"></div>
+  <script type="text/babel">
+  //组件
+  var HelloWordValue = React.createClass({
+    render: function () {
+      return <h1>Hello, {this.props.value}</h1>;
+    }
+  })
+  ReactDOM.render(
+    <HelloWordValue value = 'study React'/>,
+    document.getElementById('demo4')
+  )
+  </script>
+</body>
+</html>

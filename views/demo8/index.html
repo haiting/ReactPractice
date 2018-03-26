@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Practice</title>
+  <script src="../js/plugin/react/react.js"></script>
+  <script src="../js/plugin/react/react-dom.js"></script>
+  <script src="../js/plugin/react/browser.min.js"></script>
+</head>
+<body>
+  <div id="demo8">
+    
+  </div>
+  <script type="text/babel">
+    var LikeComponentButton = React.createClass({
+      getInitialState: function () {
+        return {liked: false};
+      },
+      handleClick: function (event) {
+        this.setState({liked: !this.state.liked});
+      },
+      render: function () {
+        var text = this.state.liked? 'like': 'have\'t liked';
+        return (
+          <p onClick={this.handleClick}>
+            You {text} this. Click to toggle.
+          </p>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <LikeComponentButton />,
+      document.getElementById('demo8')
+    )
+  </script>
+</body>
+</html>
